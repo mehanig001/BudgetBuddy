@@ -1,4 +1,4 @@
-const host = "https://budget-buddy-three-chi.vercel.app/register";
+const host = "https://budget-buddy-r6yuiakx8-mehanig001s-projects.vercel.app/";
 // const host = "http://localhost:5000";
 export const setAvatarAPI = `${host}/api/auth/setAvatar`;
 export const registerAPI = `${host}/api/auth/register`;

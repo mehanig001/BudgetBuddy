@@ -21,20 +21,20 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:3001",
   "http://localhost:5000",
-  "https://expense-tracker-app-knl1.onrender.com"
+  "https://budget-buddy-three-chi.vercel.app",
   // add more origins as needed
 ];
 
 const corsOptions = {
-  // origin: function (origin, callback) {
-  //   // allow requests with no origin (like mobile apps, curl, Postman)
-  //   if (!origin) return callback(null, true);
-  //   if (allowedOrigins.indexOf(origin) !== -1) {
-  //     callback(null, true);
-  //   } else {
-  //     callback(new Error("Not allowed by CORS"));
-  //   }
-  // },
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps, curl, Postman)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true, // if you use cookies or Authorization headers
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
@@ -43,6 +43,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 // Handle preflight requests for all routes
 app.options("*", cors(corsOptions));
+
+app.options('*', cors()); // handle pre-flight
+app.use(express.json());
 
 // ---- END CORS SETUP ----
 

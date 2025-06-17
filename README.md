@@ -6,7 +6,7 @@ A fully responsive personal finance management application built with the MERN s
 
 ## Demo
 
-> **Live Demo:** [[Add your deployed link here](https://budget-buddy-three-chi.vercel.app/)]
+> **Live Demo:** [[Click Here](https://budget-buddy-three-chi.vercel.app/)]
 
 ---
 
